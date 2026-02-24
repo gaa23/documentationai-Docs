@@ -1,0 +1,171 @@
+---
+title: Quickstart Guide
+description: Get up and running with MyDose in minutes, from account creation to your first protocol setup for seamless clinic and patient experiences.
+---
+
+## Prerequisites
+
+<Callout kind="info" title="Before You Begin">
+Ensure you have:
+- A valid email address for account verification
+- Clinic details or patient information ready (name, contact info)
+- Access to a modern web browser (Chrome, Firefox, Safari)
+- Optional: API key if integrating with external labs or telehealth services
+</Callout>
+
+MyDose provides a unified platform for protocol-based longevity care. Follow these steps to create your account, explore the dashboard, set up profiles, and launch your first protocol timeline.
+
+## Create and Verify Your Account
+
+Sign up takes under 2 minutes. MyDose supports both clinic providers and patients.
+
+<Steps>
+  <Step title="Visit the Signup Page" icon="user-plus">
+    Navigate to `https://dashboard.example.com/signup`.
+
+    Select your user role: clinic provider or patient.
+  </Step>
+  <Step title="Enter Details" icon="edit-3">
+    Provide your email, full name, and password.
+
+    For clinics, add practice name and location.
+  </Step>
+  <Step title="Verify Email" icon="mail">
+    Check your inbox for the verification link from `no-reply@example.com`.
+
+    Click the link to activate your account.
+  </Step>
+</Steps>
+
+<Callout kind="tip">
+After verification, you'll land on the dashboard. Bookmark `https://dashboard.example.com` for quick access.
+</Callout>
+
+## Dashboard Tour and Role Selection
+
+The dashboard adapts to your role. Use these tabs to preview key sections.
+
+<Tabs>
+  <Tab title="Clinic Provider" icon="users">
+    **Protocols Tab**: Manage patient timelines and biomarker tracking.
+
+    **Patients Tab**: View profiles, labs, and telehealth sessions.
+
+    **AI Insights Tab**: Get protocol recommendations powered by context-aware AI.
+  </Tab>
+  <Tab title="Patient" icon="user">
+    **My Protocols**: Track your personalized longevity plans.
+
+    **Labs & Biomarkers**: Monitor progress with charts.
+
+    **Telehealth**: Schedule virtual visits with providers.
+  </Tab>
+</Tabs>
+
+## Set Up Your First Profile
+
+Create a profile to enable protocols.
+
+<Steps>
+  <Step title="Add Clinic or Patient Profile" icon="plus">
+    From the dashboard, click **New Profile**.
+
+    Fill in details:
+    
+    | Field       | Example Value              |
+    |-------------|----------------------------|
+    | Name        | Dr. Jane Smith Clinic     |
+    | Contact     | jane@mydoseclinic.com     |
+    | Location    | 123 Health St, CA 90210   |
+  </Step>
+  <Step title="Configure Integrations" icon="settings">
+    Enable lab imports or telehealth links.
+
+    Generate an API key for external systems:
+    
+````javascript
+// Save this key securely
+const apiKey = "YOUR_MYDOSE_API_KEY";
+````
+
+  </Step>
+</Steps>
+
+## Launch Your First Protocol Timeline
+
+Protocols define long-term care plans with milestones.
+
+<CodeGroup tabs="Basic,Advanced">
+````json
+{
+  "protocolId": "longevity-basic-001",
+  "name": "Foundational Longevity Protocol",
+  "duration": "12 weeks",
+  "milestones": [
+    {
+      "week": 1,
+      "actions": ["Baseline labs", "Supplement regimen start"]
+    }
+  ]
+}
+````
+````json
+{
+  "protocolId": "longevity-advanced-002",
+  "name": "Regenerative Protocol",
+  "duration": "6 months",
+  "milestones": [
+    {
+      "week": 1,
+      "actions": ["Baseline labs", "AI biomarker analysis"]
+    },
+    {
+      "month": 3,
+      "actions": ["Follow-up imaging", "Telehealth review"]
+    }
+  ],
+  "aiEnabled": true
+}
+````
+</CodeGroup>
+
+<Steps>
+  <Step title="Create Protocol" icon="file-plus">
+    Go to **Protocols > New**.
+
+    Paste your JSON config or use the UI builder.
+  </Step>
+  <Step title="Assign to Profile" icon="link">
+    Select the profile created earlier.
+
+    Set start date and notifications.
+  </Step>
+  <Step title="Launch" icon="play">
+    Click **Launch Protocol**. Patients receive instant access via app or email.
+  </Step>
+</Steps>
+
+## Next Steps
+
+<Columns cols={2}>
+  <Card title="Authentication" icon="lock" href="/authentication">
+    Secure your API integrations and manage sessions.
+  </Card>
+  <Card title="Protocols Guide" icon="book-open" href="/protocols">
+    Dive deeper into advanced protocol customization.
+  </Card>
+  <Card title="Integrations" icon="plug" href="/integrations">
+    Connect labs, telehealth, and AI partners.
+  </Card>
+  <Card title="Help Center" icon="help-circle" href="/help-center">
+    FAQs and troubleshooting.
+  </Card>
+</Columns>
+
+<Expandable title="Troubleshooting Common Issues" default-open="false">
+- **Email not received?** Check spam folder or resend from dashboard.
+- **API key errors?** Regenerate under **Settings > API**.
+- **Protocol not starting?** Verify profile permissions.
+</Expandable>
+
+You're now ready to manage longevity care protocols with MyDose! For full features, explore the [full documentation](/introduction).
