@@ -1,128 +1,238 @@
 ---
 title: Changelog
-description: Track the latest updates and improvements to the MyDose platform, ensuring you stay informed on new features and enhancements for better care management.
+description: >-
+  Track the latest updates and improvements to the MyDose platform, ensuring you
+  stay informed on new features and enhancements for better care management.
 ---
-
 ## Recent Updates
 
-<Callout kind="info">
-Stay current with MyDose releases. Check this page regularly or subscribe to our newsletter for notifications on new versions, features, and fixes.
+<Callout kind="info" collapsed="false">
+  Stay current with MyDose releases. Check this page regularly or subscribe to our newsletter for notifications on new versions, features, and fixes.
 </Callout>
 
-<Update label="2024-10-15" description="v2.1.0" tags={["feature", "improvement"]}>
+<Update label="2026-03-18" description="March 2026" tags={["feature","improvement","bugfix"]}>
+  ### Week of March 15–18
 
-## New Features
+  - **New features**
 
-- Added AI-powered biomarker trend analysis for clinics, providing predictive insights on patient progress.
-- Introduced patient self-scheduling for telehealth appointments directly from the dashboard.
+    - Added a treatment plan overview that shows active plans, dose calendars, progress charts, and patient logs in one place.
 
-## Improvements
+    - Enabled Stripe-powered recurring billing with support for ongoing subscriptions.
 
-- Enhanced protocol builder with drag-and-drop interface for faster treatment plan creation.
-- Optimized lab result uploads, reducing processing time by `>50%`.
+  - **Improvements**
 
-## Bug Fixes
+    - Refined commitment-based subscription plans so clinics can offer 3, 6, or 12‑month programs with clear discounts and refund guarantees.
 
-- Fixed intermittent sync issues between clinic EMR systems and MyDose patient records.
-- Resolved mobile view rendering problems in the patient portal.
+  - **Fixes**
 
+    - Improved reliability of subscription renewals and billing status to prevent missed or duplicated charges.
+
+  ### Week of March 9–14
+
+  - **New features**
+
+    - Introduced a clinic billing dashboard with saved payment methods and payment history to simplify account management.
+
+    - Modernized the pharmacy experience with updated layouts for medication dispensing and order review.
+
+  - **Improvements**
+
+    - Polished the signup and login experience, including multi‑clinic support so staff can switch between organizations without logging out.
+
+  - **Fixes**
+
+    - Resolved issues where some clinics could not complete signup, invite team members, or request demos because of edge‑case flows.
+
+  ### Week of March 1–8
+
+  - **New features**
+
+    - Launched service‑specific intake questionnaires that adapt to multiple services, with conditional questions and automatic disqualification criteria.
+
+    - Added configurable category entry flows so clinics can choose whether patients start with the calendar, packages, or chat.
+
+    - Released a redesigned orders experience, including centralized order management and improved messaging between patients, clinics, and pharmacy.
+
+    - Introduced a general 6‑step patient intake flow covering demographics, health history, interests, questionnaires, photo uploads, and scheduling.
+
+  - **Improvements**
+
+    - Improved photo handling throughout intake for IDs, body photos, and prescription images, with more reliable uploads and clearer guidance.
+
+    - Added BMI and vitals tracking so clinics can follow key health metrics over time.
+
+    - Enabled exporting completed intake data to PDF for easier charting and record keeping.
+
+    - Overhauled the clinic dashboard with a setup tracker, key metrics, calendar view, and notification center.
+
+  - **Fixes**
+
+    - Tightened questionnaire validation and draft saving to prevent lost answers and incomplete submissions.
+
+    - Addressed image upload edge cases, environment misconfigurations, and general stability issues across the platform.
 </Update>
 
-<Update label="2024-09-25" description="v2.0.0" tags={["feature", "breaking"]}>
+<Update label="2026-02-28" description="February 2026" tags={["feature","improvement","bugfix"]}>
+  ### Week of February 22–28
 
-## New Features
+  - **New features**
 
-- Launched unified patient portal with real-time lab tracking and personalized longevity recommendations.
-- Integrated telehealth video calls with automatic note generation via AI transcription.
+    - Added clinic verification and license management so organizations can keep regulatory details up to date.
 
-## Breaking Changes
+  - **Improvements**
 
-- Updated API authentication to require `{API_KEY}` in headers only (removed query param support).
+    - Extended notification coverage and delivery, including push notifications, to keep providers and patients informed about time‑sensitive events.
 
-<CodeGroup tabs="JavaScript,cURL">
-```javascript
-// New header-only auth
-const response = await fetch('https://api.mydose.ai/v2/patients', {
-  headers: {
-    'Authorization': `Bearer ${YOUR_API_KEY}`
-  }
-});
-```
+  - **Fixes**
 
-```bash
-# New header-only auth
-curl -H "Authorization: Bearer YOUR_API_KEY" https://api.mydose.ai/v2/patients
-```
-</CodeGroup>
+    - Removed deprecated clinic SKUs from selection flows to avoid confusion.
 
-## Bug Fixes
+    - Improved reliability of the NewLife Pharmacy integration and hardened error handling for external services.
 
-- Corrected protocol adherence reporting discrepancies in multi-clinic setups.
+  ### Week of February 15–21
 
+  - **New features**
+
+    - Launched treatment actions so providers can accept, decline, or pause treatment plans directly from patient records.
+
+    - Enabled provider assignment tools to route patients and treatment plans to the right clinician.
+
+  - **Improvements**
+
+    - Enhanced patient order history with clearer status indicators and timelines, making it easier to track fulfillment and follow‑ups.
+
+    - Introduced bulk patient import via CSV to help clinics onboard existing populations quickly.
+
+  - **Fixes**
+
+    - Addressed edge cases in treatment transitions where status or ownership could become inconsistent.
+
+  ### Week of February 8–14
+
+  - **New features**
+
+    - Rolled out patient messaging threads that keep all conversations in context for each patient and clinic.
+
+    - Added inline booking from message threads so staff can schedule follow‑ups without leaving the conversation.
+
+    - Introduced license tracking and compliance checks for bookings to ensure patients see properly licensed providers.
+
+  - **Improvements**
+
+    - Refined the patient overview page to surface health history, active treatments, orders, records, messaging, booking, and reassignment in a single view.
+
+    - Enhanced order history and status views to support faster triage and support.
+
+  - **Fixes**
+
+    - Resolved message delivery and threading issues that could cause lost or duplicated conversations in busy clinics.
+
+  ### Week of February 1–7
+
+  - **New features**
+
+    - Delivered a user and team management dashboard with role‑based access controls and email invites for staff.
+
+    - Improved the scheduling experience with real‑time availability and a more intuitive time selection flow.
+
+    - Added an accept‑invite flow so new team members can join clinics from secure email links.
+
+    - Introduced treatment phases and dosing schemas with structured dose logs to support more complex protocols.
+
+    - Redesigned the service and package creation experience, making it easier to define offerings, pricing, and fulfillment rules.
+
+    - Launched the first ED‑specific intake form and the foundation for fully custom questionnaires.
+
+  - **Improvements**
+
+    - Tightened license checks during booking to prevent scheduling with out‑of‑jurisdiction providers.
+
+  - **Fixes**
+
+    - Fixed issues with NewLife Pharmacy reliability and improved platform‑wide stability and error messages when actions fail.
 </Update>
 
-<Update label="2024-08-10" description="v1.9.0" tags={["bugfix", "improvement"]}>
+<Update label="2026-01-31" description="January 2026" tags={["feature","improvement","bugfix"]}>
+  ### Week of January 27–31
 
-## Improvements
+  - **New features**
 
-- Streamlined dashboard with customizable widgets for clinics and patients.
-- Added export options for treatment protocols in PDF and CSV formats.
+    - Expanded the package builder with more flexible pricing and fulfillment controls, including live price calculations as clinics configure options.
 
-## Bug Fixes
+  - **Improvements**
 
-- Patched security vulnerability in webhook endpoints (CVE-2024-XXXX).
-- Fixed notification delivery delays for lab result updates.
+    - Standardized core UI components across the app for a more consistent clinic and patient experience.
 
+    - Added clearer alerts and handling for authentication errors to reduce failed sign‑ins.
+
+  - **Fixes**
+
+    - Patched security vulnerabilities identified in early access deployments.
+
+    - Resolved build and environment configuration issues that could block new clinic launches.
+
+  ### Week of January 20–26
+
+  - **New features**
+
+    - Integrated Stripe payments into clinic signup so organizations can activate accounts and billing in a single flow.
+
+  - **Improvements**
+
+    - Extended the calendar API and scheduling layer to better support complex availability rules and appointment types.
+
+  - **Fixes**
+
+    - Corrected payment edge cases where charges or receipts might not match clinic expectations.
+
+  ### Week of January 13–19
+
+  - **New features**
+
+    - Introduced a dedicated calendar interface for clinics that surfaces provider availability and upcoming appointments.
+
+    - Added a configurable package builder for medications, dosing schedules, pricing, and fulfillment preferences.
+
+  - **Improvements**
+
+    - Migrated core data models to a strongly typed database toolkit to improve reliability and reduce data‑related errors going forward.
+
+  - **Fixes**
+
+    - Addressed migration‑related regressions uncovered as clinics moved to the new data layer.
+
+  ### Week of January 6–12
+
+  - **New features**
+
+    - Added WorkOS‑backed authentication with directory sync to support enterprise single sign‑on and team provisioning.
+
+    - Launched an actions and review workflow so staff can triage and process patient submissions efficiently.
+
+    - Released a calendar API for appointments and availability that underpins the clinic scheduling experience.
+
+  - **Improvements**
+
+    - Enhanced password reset flows and sign‑in redirects so patients and staff reliably land where they expect after authentication.
+
+  - **Fixes**
+
+    - Fixed issues where some users could not reset passwords or were redirected to incorrect pages after login.
+
+  ### Week of January 1–5
+
+  - **New features**
+
+    - Delivered multi‑step questionnaires for Weight Loss and Anti‑Aging programs, including structured photo uploads and eligibility checks.
+
+    - Redesigned the marketplace with supplier cards, a clearer consent workflow, and a more intuitive cart experience.
+
+  - **Improvements**
+
+    - Improved consent collection and telehealth consultation payloads so clinics receive richer, more structured clinical data.
+
+  - **Fixes**
+
+    - Resolved payment flow problems, environment configuration errors, and early security issues identified in pilot clinics.
 </Update>
 
-## Feature Summary
-
-<Columns cols={3}>
-  <Card title="Clinic Tools" icon="users" href="#recent-updates">
-    Enhanced protocol management and AI insights for providers.
-  </Card>
-  <Card title="Patient Experience" icon="heart" href="#recent-updates">
-    Self-scheduling, real-time tracking, and personalized recommendations.
-  </Card>
-  <Card title="Integrations" icon="link" href="#recent-updates">
-    Improved EMR sync and telehealth capabilities.
-  </Card>
-</Columns>
-
-## Upcoming Roadmap
-
-<ExpandableGroup>
-  <Expandable title="Q4 2024: Advanced AI Features" default-open="true">
-    - Multi-protocol simulation engine for outcome predictions.
-    - Wearable device integration for continuous biomarker monitoring.
-  </Expandable>
-  <Expandable title="Q1 2025: Enterprise Scaling">
-    - Multi-location clinic support with centralized analytics.
-    - Custom reporting dashboards for research partners.
-  </Expandable>
-</ExpandableGroup>
-
-<Tabs>
-  <Tab title="How to Upgrade" icon="settings">
-    <Steps>
-      <Step title="Backup Data">
-        Export your current protocols and patient data.
-      </Step>
-      <Step title="Update Client">
-        ```bash
-        npm update mydose-sdk@latest
-        ```
-      </Step>
-      <Step title="Test Integrations">
-        Verify API endpoints and webhook configurations.
-      </Step>
-    </Steps>
-  </Tab>
-  <Tab title="Report Issues" icon="alert-triangle">
-    Use our <a href="https://github.com/mydose/issues" target="_blank">GitHub repository</a> or contact support@mydose.ai.
-  </Tab>
-</Tabs>
-
-<Callout kind="tip">
-Review release notes for each version before upgrading. Test in staging environments first.
-</Callout>
