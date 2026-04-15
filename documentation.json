@@ -15,53 +15,63 @@
   "navigation": {
     "tabs": [
       {
-        "tab": "Documentation",
+        "tab": "Clinic Guide",
         "icon": "book",
         "groups": [
           {
             "group": "Getting Started",
             "icon": "rocket",
+            "expandable": false,
             "pages": [
               {
-                "title": "Introduction",
-                "path": "introduction",
-                "icon": "home"
+                "title": "Platform Overview",
+                "path": "clinic-guide/overview"
               },
               {
-                "title": "Quickstart",
-                "path": "quickstart",
-                "icon": "zap"
+                "title": "Set Up Prescriber Credentials",
+                "path": "clinic-guide/prescriber-credentials"
+              },
+              {
+                "title": "Manage Team Members",
+                "path": "clinic-guide/team-management"
               }
             ]
           },
           {
-            "group": "Core Concepts",
-            "icon": "layers",
+            "group": "Patients",
+            "icon": "users",
+            "expandable": false,
             "pages": [
               {
-                "title": "Features",
-                "path": "features",
-                "icon": "file-text"
+                "title": "Add a Patient",
+                "path": "clinic-guide/add-patient"
+              },
+              {
+                "title": "Review Patient Progress",
+                "path": "clinic-guide/patient-progress"
+              },
+              {
+                "title": "Message Patients",
+                "path": "clinic-guide/messaging"
               }
             ]
           },
           {
-            "group": "Advanced",
-            "icon": "package",
+            "group": "Treatments & Prescribing",
+            "icon": "clipboard-list",
+            "expandable": false,
             "pages": [
               {
-                "title": "Integrations",
-                "path": "integrations",
-                "icon": "link"
-              }
-            ]
-          },
-          {
-            "group": "Core Features",
-            "pages": [
+                "title": "Assign a Package to a Patient",
+                "path": "clinic-guide/assign-package"
+              },
               {
-                "title": "Core Features",
-                "path": "core-features"
+                "title": "Create a Treatment Plan",
+                "path": "clinic-guide/create-treatment-plan"
+              },
+              {
+                "title": "Review and Approve Intakes",
+                "path": "clinic-guide/review-intakes"
               }
             ]
           }

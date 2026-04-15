@@ -1,0 +1,64 @@
+---
+title: Create a Treatment Plan
+description: How to build a custom treatment plan from scratch for a patient.
+---
+
+## When to create a custom plan
+
+[Assigning a package](/clinic-guide/assign-package) is the fastest way to start a patient on treatment — it pre-fills everything from a template. Create a custom treatment plan when:
+
+- No existing package matches the patient's protocol
+- You need to modify dosage, titration, or duration beyond what a package allows
+- You're prescribing a one-off or experimental protocol
+
+## Before you start
+
+Your prescriber credentials must be on file before you can finalize any treatment plan. If you haven't added them yet, see [Set Up Prescriber Credentials](/clinic-guide/prescriber-credentials).
+
+## Creating a treatment plan
+
+<Steps>
+  <Step title="Go to Treatment Plans">
+    In the sidebar, select **Treatment Plans**, then select **New**.
+  </Step>
+  <Step title="Select the patient">
+    Search for and select the patient this plan is for. The patient must already exist in your system. If not, [add them first](/clinic-guide/add-patient).
+  </Step>
+  <Step title="Choose the medication">
+    Select the medication or peptide from your clinic's inventory. This determines the available dosage units (mg, µg, IU, mL, Units).
+  </Step>
+  <Step title="Define the treatment protocol">
+    Set the dosage and schedule:
+
+    - **Initial dosage** — the starting dose and unit
+    - **Frequency** — how often the patient takes the dose (e.g., once weekly)
+    - **Duration** — how long the initial phase runs
+    - **Titration schedule** — add phases to escalate the dose over time. Each phase has its own dosage, frequency, and duration.
+    - **Maintenance dosage** — the dose the patient stays on after titration completes
+    - **Number of treatments** — total administrations across all phases
+    - **Appointment link** — optionally link a scheduled consultation to this plan
+  </Step>
+  <Step title="Add prescriber information">
+    Confirm or enter your credentials:
+
+    - **NPI number** — National Provider Identifier
+    - **DEA number** — Drug Enforcement Administration registration
+    - **State medical license** — for the state where the patient is located
+
+    These are saved to your profile and auto-filled on future plans.
+  </Step>
+  <Step title="Attach consent forms">
+    Select any consent forms the patient must sign before treatment begins. You can attach multiple forms. If the required form doesn't exist yet, see [Create a Consent Form](/clinic-guide/consent-forms).
+  </Step>
+  <Step title="Review and create">
+    Review the full plan — protocol, prescriber info, and consent requirements. Select **Create** to generate the treatment plan.
+
+    The patient is notified and the plan appears in their portal under **Treatments** with a status of **Pending Patient**.
+  </Step>
+</Steps>
+
+## What happens after creation
+
+The patient must accept the plan before it becomes active. If the plan includes an intake questionnaire, they complete it after accepting. Once submitted, the intake appears in your [Action Center](/clinic-guide/review-intakes) for approval.
+
+See [treatment plan statuses](/clinic-guide/assign-package#treatment-plan-statuses) for a full breakdown of each state.

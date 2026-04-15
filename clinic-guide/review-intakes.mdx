@@ -1,0 +1,48 @@
+---
+title: Review and Approve Intakes
+description: How to review patient intake questionnaires and approve or decline them before treatment begins.
+---
+
+## What is an intake?
+
+An intake is a health questionnaire a patient completes as part of their treatment plan or booking flow. It collects the clinical information you need to assess eligibility before prescribing — symptoms, medical history, medications, and uploaded photos (ID, full body, prescription).
+
+Intakes that need your review appear in the **Action Center**, which is your primary queue for urgent clinical tasks.
+
+## Reviewing pending intakes
+
+<Steps>
+  <Step title="Open the Action Center">
+    In the sidebar, select **Action Center**. This lists all intakes waiting for review, grouped by patient and package. The count badge on the sidebar icon shows how many are pending.
+  </Step>
+  <Step title="Open an intake">
+    Select a patient's intake from the list. You'll see:
+
+    - Their questionnaire responses
+    - Uploaded photos (ID, full body, prescription images)
+    - The package or treatment plan the intake is associated with
+    - Patient contact info and profile summary
+  </Step>
+  <Step title="Approve or decline">
+    After reviewing, select **Approve** or **Decline**.
+
+    - **Approve** — moves the treatment plan to Active (or to the next step if additional requirements remain). The patient is notified.
+    - **Decline** — rejects the intake. The treatment plan does not proceed. You can include a reason, which is sent to the patient.
+  </Step>
+</Steps>
+
+## Who can approve intakes
+
+Only team members with the `approve_intakes` permission can review and approve intakes. This is typically assigned to prescribers and admins. If you don't see the Action Center, check with your admin to confirm your permissions in **Settings → User Management**.
+
+## Intake statuses
+
+| Status        | Meaning                                      |
+|---------------|----------------------------------------------|
+| Pending Doctor | Intake submitted by patient, awaiting your review |
+| Approved      | Intake reviewed and accepted; treatment plan proceeds |
+| Declined      | Intake reviewed and rejected; treatment plan does not proceed |
+
+## Intake approval and appointment timing
+
+If a package is configured to require intake approval before the appointment, the patient's booking is held until you approve. Once approved, the appointment is confirmed and the patient is notified. If you decline after a consultation has been booked, the appointment should be cancelled manually from the Calendar.

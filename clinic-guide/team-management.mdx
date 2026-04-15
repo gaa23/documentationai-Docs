@@ -1,0 +1,68 @@
+---
+title: Manage Team Members
+description: How to invite staff and doctors, assign roles, and control access permissions.
+---
+
+## Team roles
+
+Every team member has a role that determines what they can do in the platform.
+
+| Role | Description |
+|------|-------------|
+| Admin | Full access to all features, settings, and billing |
+| Doctor / Prescriber | Can create treatment plans, approve intakes, and access patient records and calendar |
+| Staff | Can manage patients and appointments; cannot prescribe or approve intakes |
+
+Roles are set when you invite someone and can be updated at any time.
+
+## Inviting a team member
+
+<Steps>
+  <Step title="Open User Management">
+    In the sidebar, select **Settings**, then **User Management**.
+  </Step>
+  <Step title="Invite a new member">
+    Select **Invite Member**. Enter their:
+
+    - **Email address**
+    - **Role** — Admin, Doctor, or Staff
+    - **Name** (optional at this stage)
+  </Step>
+  <Step title="Send the invitation">
+    Select **Send Invite**. The team member receives an email with a link to create their account and join your clinic.
+
+    They appear in the team list as **Pending** until they accept the invitation.
+  </Step>
+</Steps>
+
+## Editing a team member's role or permissions
+
+<Steps>
+  <Step title="Open User Management">
+    In the sidebar, select **Settings**, then **User Management**.
+  </Step>
+  <Step title="Select the team member">
+    Find the person in the list and select **Edit**.
+  </Step>
+  <Step title="Update their role or permissions">
+    Change the role or toggle individual permissions as needed:
+
+    - `manage_patients` — access to the patient list and profiles
+    - `manage_appointments` — access to the calendar and appointment management
+    - `approve_intakes` — ability to review and approve intake questionnaires
+    - `prescribe` — ability to create and finalize treatment plans
+
+    Doctors typically have all four. Staff typically have `manage_patients` and `manage_appointments` only.
+  </Step>
+  <Step title="Save">
+    Select **Save**. Changes take effect immediately.
+  </Step>
+</Steps>
+
+## Removing a team member
+
+Open the team member's profile in **Settings → User Management** and select **Remove**. Their account is deactivated and they lose access to the platform. Any treatment plans or appointments they created remain intact.
+
+## Prescriber credentials
+
+Doctors must add their NPI, DEA number, and state licenses before they can create treatment plans. As an admin, you can view and prompt prescribers to complete their credentials from the User Management page. See [Set Up Prescriber Credentials](/clinic-guide/prescriber-credentials) for the full steps.
